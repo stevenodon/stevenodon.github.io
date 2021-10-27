@@ -1,0 +1,15 @@
+body{
+    background-image:url(../Images/background.jpeg);
+    background-size:100%;
+}
+div{
+    background-color:grey;
+}
+.row{
+    justify-content:space-between;
+    margin-top:25px;
+    margin-bottom:25px;
+}
+.carousel-item{
+    text-align:justify;
+}

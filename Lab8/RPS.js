@@ -1,39 +1,52 @@
-function game(){
-    var userPick;
-    var result;
-    userPick=prompt("Enter your answer rock, paper or scissors.","");
-    const options=["rock","paper","scissors"];
-    let compPick=options[Math.floor(Math.random()*3+1)];
-    
+//Created a click counter that reloads the page when the value goes above 2. 
+
+var clickNumber =0;
+function incrementClick(){
+	updateDisplay(++clickNumber);
+}
+
+function updateDisplay(valueNum){
+	document.getElementById("counter-label").innerHTML="Attempt: "+valueNum;
+	if(valueNum>2){
+		alert("You have tried 3 times. No more attempts left.");
+		location.reload();
+	}
+	else if(message=="You win"){
+		alert("You have won! Ready to start again?");
+		location.reload();
+	}
+}
+
+function RPSrun(optionPick){
+		let userPick=optionPick;
+		const compArray=["rock","paper","scissors"];
+		let compPick=compArray[parseInt(Math.random()*3)];
 		if(userPick==compPick){
-			result="draw.";
+			message="It's a draw"
 		}
-		//user picks rock
 		else if(userPick=="rock"){
 			if(compPick=="paper"){
-				result="loss for you.";
+				message="You lose";
 			}
 			else{
-				result="win for you!";
+				message="You win";
 			}
 		}
-		//user picks paper
 		else if(userPick=="paper"){
 			if(compPick=="scissors"){
-				result="loss for you.";
+				message="You lose"
 			}
 			else{
-				result="win for you!";
+				message="You win";
 			}
 		}
-		//user picks scissors
 		else if(userPick=="scissors"){
 			if(compPick=="rock"){
-				result="loss for you.";
+				message="You lose";
 			}
 			else{
-				result="win for you!";
+				message="You win";
 			}
 		}
-    document.getElementById("placeholder").innerHTML="Computer picked "+options.pop(compPick)+". It's a "+result;
+		alert("You picked "+userPick+". The computer picked "+compPick+". The result: "+message);
 }

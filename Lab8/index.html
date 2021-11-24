@@ -15,12 +15,16 @@
 </head>
 <body>
     <div>
-        <h1 id="placeholder">Welcome to Rock, Paper, Scissors game</h1>
+        <h1 id="message">Welcome to Rock, Paper, Scissors game</h1>
     </div>
     <div>
-        <p>Press the </p>
-        <button id="button" onclick="game()">Button</button>
-        <p> to begin the game</p>
+        <h2 id="counter-label"> Attempt: 0</h3>
+    </div>
+    <div>
+        <p>Pick one of the following</p>
+        <button id="rock" onclick="RPSrun(this.id),incrementClick()">Rock</button>
+        <button id="paper" onclick="RPSrun(this.id),incrementClick()">Paper</button>
+        <button id="scissors" onclick="RPSrun(this.id),incrementClick()">Scissors</button>
     </div>
     <script src="RPS.js"></script>
 </body>

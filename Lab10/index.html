@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shopping List</title>
+        <style>
+            .container-1{
+                display: flex;
+                justify-content: space-around;
+                background-image: url(images//pexels-daniel-reche-3616959.jpg);
+                background-size: 100%;
+                background-repeat: no-repeat;
+                height: 695px;
+            }
+            .container-box-1{
+                flex-basis: 75%;
+                margin-left: 30px;
+                margin-top: 30px;
+            }
+            .container-box-2{
+                margin-top: 10%;
+                margin-right: 10%;
+                flex-basis:25%;
+            }
+            li {
+                color: white;
+                font-size: 30px;
+                font-family: fantasy;
+            }
+            h2 {
+                color: white;
+            }
+            body {
+                background-image: linear-gradient(white, green);
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1 style="text-align:center; color: black;">Shopping List</h1>
+        </div>
+        <div class="container-1">
+            <div class="container-box-1">
+                <ul id="list" style="list-style-type: circle;"></ul>
+            </div>
+            <div class="container-box-2">
+                <h2>Add to list</h2>
+                <button onclick="addToEnd()">Add to end</button>
+                <button onclick="addToStart()">Add to the start</button>
+                <h2>Remove from list</h2>
+                <button onclick="removeFromEnd()">Remove from end</button>
+                <button onclick="removeFromStart()">Remove from start</button>
+            </div>
+        </div>
+        <script src="javascript.js"></script>
+    </body>
+</html>
